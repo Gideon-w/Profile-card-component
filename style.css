@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+:root {
+  /**** Colors *****/
+  --Primary-Dark-Cyan: hsl(185, 75%, 39%);
+  --Primary-Very-Dark-Desaturated-Blue: hsl(229, 23%, 23%);
+  --Primary-Dark-GrayishBlue: hsl(227, 10%, 46%);
+
+  --Neutral-Dark-Gray: hsl(0, 0%, 59%);
+
+  /**** Typography *****/
+  --FontWeight-Bold: 700;
+  --FontWeight-Light: 400;
+  --Font-Size: 1.8rem;
+  --FontFamily: "Kumbh Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media (max-width: 26.375em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 21.25em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--Primary-Dark-Cyan);
+}
+.pattern {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  z-index: -99;
+}
+.pattern-top {
+  bottom: 50%;
+  right: 50%;
+  /* border: 1px solid lime; */
+  /* transform: translate(-50%, -70%); */
+}
+.pattern-bottom {
+  top: 50%;
+  left: 50%;
+  /* border: 1px solid red; */
+  /* transform: translate(55%, 70%); */
+}
+.container {
+  overflow-x: inherit;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15rem;
+  gap: 5rem;
+  position: relative;
+  font-family: var(--FontFamily);
+  font-size: var(--Font-Size);
+  /* border: 1px solid purple; */
+}
+.card {
+  width: 38rem;
+  height: 42rem;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.6rem;
+}
+.card,
+.attribution {
+  position: absolute;
+
+  /* display: none; */
+}
+.main-header {
+  position: relative;
+  flex-basis: 16rem;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background-image: url(images/bg-pattern-card.svg);
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  position: absolute;
+  bottom: -50%;
+  right: 50%;
+  transform: translate(50%, 25%);
+}
+
+.profile-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.profile-caption .name {
+  font-size: 2.4rem;
+  font-weight: var(--FontWeight-Bold);
+  color: var(--Primary-Dark-GrayishBlue);
+  margin-right: 0.8rem;
+}
+
+.profile-caption span {
+  font-size: 2rem;
+}
+.profile-caption .location {
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.profile-caption span,
+.profile-caption .location,
+.main-content .profile-info {
+  font-weight: var(--FontWeight-Light);
+  color: var(--Neutral-Dark-Gray);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-basis: calc(100% - 16rem);
+  padding-bottom: 3rem;
+  background-color: #fff;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.main-content span {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 2.4rem;
+  font-weight: var(--FontWeight-Bold);
+  color: var(--Primary-Very-Dark-Desaturated-Blue);
+}
+
+/*=====================================
+=            Footer Styles            =
+=====================================*/
+.mentor {
+  font-size: 2.4rem;
+  color: var(--Primary-Dark-GrayishBlue);
+}
+.coder {
+  font-size: 3rem;
+  font-weight: var(--FontWeight-Bold);
+  color: var(--Primary-Very-Dark-Desaturated-Blue);
+  font-style: italic;
+}
+.attribution {
+  width: 38rem;
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.attribution,
+.attribution a:link {
+  font-family: var(--FontFamily);
+  color: currentColor;
+  text-decoration: none;
+  padding-left: 0.8rem;
+}
+.coder a:link {
+  font-weight: var(--FontWeight-Bold);
+  text-decoration: underline;
+  line-height: 1.6;
+}
+.attribution a:visited {
+  color: hsl(281, 56%, 44%);
+}
+.attribution a:hover {
+  color: var(--Neutral-Dark-Gray);
+  text-decoration: underline;
+}
+.coder a:hover {
+  font-weight: var(--FontWeight-Bold);
+  text-decoration: none;
+}
+.attribution a:active {
+  color: var(--Primary-Bright-Orange);
+}
